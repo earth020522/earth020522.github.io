@@ -51,6 +51,8 @@ int main()
     return 0;
 }
 
+여기부턴 #include fstream 들어감.
+
 using namespace std;
 int main()
 {
@@ -66,5 +68,24 @@ int main()
 	return 0;
 }
 
+using namespace std;
+int main()
+{
+	int number;
+	cout << "숫자를 입력하세요>";
+	cin >> number;
+	//ofstream os{ "input.txt" }; // 열기
+	//os << number;
+	//os.close(); // 저장 후 닫기
+	// TODO: input.txt에서 숫자 읽어서
+	// 변수 number 자리에 담기
+	ifstream is{ "input.txt" };
+	is >> number;
+	is.close();
+	cout << "입력한 숫자는 ";
+	cout << number;
+	cout << "입니다." << endl;
+	return 0;
+}
 </body>
 </html>
